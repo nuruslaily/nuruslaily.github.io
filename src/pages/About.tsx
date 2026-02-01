@@ -12,7 +12,7 @@ export default function About() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="card bg-[#52677d] dark:text-[#d1cfc9] shadow-md">
+        <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md">
           <div className="card-body">
             <h3 className="card-title">Experience</h3>
             <ul className="list-disc list-inside space-y-2">
@@ -23,7 +23,7 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <div className="card bg-[#52677d] dark:text-[#d1cfc9] shadow-md">
+        <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md">
           <div className="card-body">
             <h3 className="card-title">Education</h3>
             <ul className="list-disc list-inside space-y-2">
@@ -34,7 +34,7 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <div className="card bg-[#52677d] dark:text-[#d1cfc9] shadow-md">
+        <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md">
           <div className="card-body">
             <h3 className="card-title">Passion</h3>
             <p>

@@ -24,7 +24,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="navbar bg-[#1c2e4a] text-base-content/80 dark:text-[#d1cfc9] shadow-lg">
+    <div className="navbar bg-[#522959] text-[#FAE5D8] shadow-lg">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-lg font-bold">
           Nurus Laily Aprilia
@@ -38,7 +38,7 @@ export default function Navigation() {
                 type="checkbox"
                 checked={isDark}
                 onChange={toggleDarkMode}
-                className="toggle border-[#0f1a2b] bg-[#52677d] checked:border-[#0f1a2b] checked:bg-[#d1cfc9] checked:text-[#0f1a2b]"
+                className="toggle border-[#180018] bg-[#824D69] text-[#180018] checked:bg-[#2A114B] checked:text-[#DFB6B2]"
               />
               <span className="text-xl">{isDark ? "🌙" : "☀️"}</span>
             </label>

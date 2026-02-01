@@ -6,9 +6,10 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
+  const [isDark, setIsDark] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,17 +28,27 @@ export default function Contact() {
     setFormData({ name: "", email: "", message: "" });
   };
 
+    
+      useEffect(() => {
+        const saved = localStorage.getItem("theme") === "dark";
+        setIsDark(saved);
+        document.documentElement.setAttribute(
+          "data-theme",
+          saved ? "dark" : "light",
+        );
+      }, []);
+
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
-        <p className="text-lg text-[#1c2e4a] dark:text-[#d1cfc9]">
+        <h5 className={`${isDark ? "text-[#180018]" : "text-[#FAE5D8]"}`}>
           I'm always interested in hearing about new projects and opportunities.
-        </p>
+        </h5>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div className="card bg-[#52677d] text-[#1c2e4a] dark:text-[#d1cfc9] shadow-xl">
+        <div className="card bg-[#824D69] text-[#180018] dark:text-[#FAE5D8] shadow-xl">
           <div className="card-body">
             <h3 className="card-title mb-4">Send me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -45,7 +56,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full text-[#180018] dark:text-[#FAE5D8]"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -54,7 +65,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full text-[#180018] dark:text-[#FAE5D8]"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -63,14 +74,14 @@ export default function Contact() {
                 name="message"
                 placeholder="Your Message"
                 rows={5}
-                className="textarea textarea-bordered w-full"
+                className="textarea textarea-bordered w-full text-[#180018] dark:text-[#FAE5D8]"
                 value={formData.message}
                 onChange={handleChange}
                 required
               ></textarea>
               <button
                 type="submit"
-                className="btn bg-[#1c2e4a] border-0 hover:bg-[#0f1a2b] dark:text-[#d1cfc9] w-full"
+                className="btn bg-[#2A114B] border-0 hover:bg-[#180018] dark:text-[#FAE5D8] w-full"
               >
                 Send Message
               </button>
@@ -78,7 +89,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="card bg-[#52677d] dark:text-[#d1cfc9] shadow-xl">
+        <div className="card bg-[#824D69] text-[#FAE5D8] shadow-xl">
           <div className="card-body">
             <h3 className="card-title mb-4">Other Ways to Connect</h3>
             <div className="flex flex-col gap-3">

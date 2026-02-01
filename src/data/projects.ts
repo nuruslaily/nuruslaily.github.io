@@ -1,3 +1,6 @@
+import pointid1 from "../assets/images/pointid1.jpeg";
+import pointid2 from "../assets/images/pointid2.jpeg";
+import pointid3 from "../assets/images/pointid3.jpeg";
 export const projects = [
   {
     id: 1,
@@ -8,10 +11,9 @@ export const projects = [
       "Point.ID is a comprehensive loyalty point agent application designed for loyal customers of registered merchants. The application provides seamless integration with merchant systems, allowing users to track, accumulate, and redeem loyalty points across multiple merchant partners. Built with Flutter for cross-platform mobile support, utilizing Golang backend services and REST API for robust and scalable operations.",
     technologies: ["Flutter", "Dart", "Rest API"],
     images: [
-      "/images/point-id-1.png",
-      "/images/point-id-2.png",
-      "/images/point-id-3.png",
-      "/images/point-id-4.png",
+      pointid1,
+      pointid2,
+      pointid3,
     ],
     link: "https://github.com/capstone-kelompok-25/loyalty-point-agent",
   },

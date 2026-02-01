@@ -56,7 +56,7 @@ export default function ProjectDetail() {
             <img
               src={project.images[0]}
               alt={`${project.title} screenshot`}
-              className="w-80 items-center rounded-lg cursor-pointer"
+              className="w-20 items-center rounded-lg cursor-pointer"
               onClick={() => setSelectedImageIdx(0)}
             />
           </figure>

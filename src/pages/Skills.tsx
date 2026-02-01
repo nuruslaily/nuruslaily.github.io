@@ -9,7 +9,7 @@ export default function Skills() {
         {skills.map((skill, idx) => (
           <div
             key={idx}
-            className="badge badge-lg bg-[#1c2e4a] border-0 hover:bg-[#0f1a2b] dark:text-[#d1cfc9] p-4 text-center"
+            className="badge badge-lg bg-[#824D69] border-0 hover:bg-[#180018] dark:text-[#FAE5D8] p-4 text-center"
           >
             {skill}
           </div>
@@ -18,12 +18,12 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {categories.map((category, idx) => (
-          <div key={idx} className="card bg-[#52677d] dark:text-[#d1cfc9]">
+          <div key={idx} className="card bg-[#824D69] dark:text-[#FAE5D8]">
             <div className="card-body">
               <h3 className="card-title">{category.name}</h3>
               <ul className="list-disc list-inside space-y-2">
                 {category.items.map((item, i) => (
-                  <li key={i} className="text-[#d1cfc9]">
+                  <li key={i} className="text-[#FAE5D8]">
                     {item}
                   </li>
                 ))}

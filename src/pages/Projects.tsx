@@ -12,7 +12,7 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="card bg-[#52677d] dark:text-[#d1cfc9] shadow-xl hover:shadow-2xl transition-shadow"
+            className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-xl hover:shadow-2xl transition-shadow"
           >
             <div className="card-body">
               <h3 className="card-title">{project.title}</h3>
@@ -21,7 +21,7 @@ export default function Projects() {
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="badge bg-[#1c2e4a] border-0 hover:bg-[#0f1a2b] dark:text-[#d1cfc9] badge-sm"
+                    className="badge bg-[#2A114B] border-0 hover:bg-[#180018] text-[#180018] dark:text-[#FAE5D8] badge-sm"
                   >
                     {tech}
                   </span>
@@ -30,7 +30,7 @@ export default function Projects() {
               <div className="card-actions justify-start">
                 <Link
                   to={`/project/${project.id}`}
-                  className="btn bg-[#1c2e4a] border-0 hover:bg-[#0f1a2b] dark:text-[#d1cfc9] btn-sm"
+                  className="btn bg-[#2A114B] border-0 hover:bg-[#180018] text-[#180018] dark:text-[#FAE5D8] btn-sm"
                 >
                   View Details <MoveRight />
                 </Link>
