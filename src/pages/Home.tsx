@@ -1,4 +1,4 @@
-import profileImage from "../assets/profile.jpg";
+// import profileImage from "../assets/profile.jpg";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <section id="home">
-        <div className="hero min-h-screen bg-gradient-to-br from-[#824D69] via-[#522959] to-[#2A114B] text-primary-content">
+        <div className="hero min-h-screen bg-linear-to-br from-[#824D69] via-[#522959] to-[#2A114B] text-primary-content">
           <div className="hero-content flex-col lg:flex-row-reverse">
             {/* <img
               src={profileImage}

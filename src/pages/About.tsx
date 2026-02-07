@@ -34,7 +34,7 @@ export default function About() {
               alt="About gallery"
               className="w-80 max-h-120 rounded-2xl shadow-xl cursor-pointer"
             />
-            <div className="absolute -inset-4 bg-gradient-to-br from-[#824D69] to-[#2A114B] rounded-2xl blur-xl opacity-30 -z-10" />
+            <div className="absolute -inset-4 bg-linear-to-br from-[#824D69] to-[#2A114B] rounded-2xl blur-xl opacity-30 -z-10" />
             {images.length > 1 && (
               <div className="flex justify-between mt-4">
                 <button

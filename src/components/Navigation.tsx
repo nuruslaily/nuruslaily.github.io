@@ -75,7 +75,7 @@ export default function Navigation() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#522959] rounded-box w-40">
+                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#522959] rounded-box w-40">
                 <li>{navLink("home", "Home")}</li>
                 <li>{navLink("about", "About")}</li>
                 <li>{navLink("projects", "Projects")}</li>
