@@ -18,8 +18,9 @@ export default function ProjectDetail() {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-2xl font-bold">Project not found</h2>
-        <Link to="/projects" className="btn btn-[#572e54] mt-4">
-          Back to Projects
+        <Link to="/" className="btn btn-ghost btn-sm sm:btn-md mb-4">
+          <ArrowLeft className="mr-2" size={18} />
+          Back
         </Link>
       </div>
     );
@@ -42,32 +43,52 @@ export default function ProjectDetail() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <Link to="/projects" className="btn btn-ghost mb-6">
+    <div className="container mx-auto px-4 py-20 lg:py-30">
+      <Link to="/" className="btn btn-ghost mb-6">
         <ArrowLeft className="mr-2" /> Back to Projects
       </Link>
 
       <article className="max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold mb-6">{project.title}</h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          {project.title}
+        </h1>
 
         {/* Project Images Gallery */}
-        <div className="mb-8 rounded-lg overflow-hidden">
-          <figure className="mb-4 w-full flex justify-center">
-            <img
-              src={project.images[0]}
-              alt={`${project.title} screenshot`}
-              className="w-20 items-center rounded-lg cursor-pointer"
-              onClick={() => setSelectedImageIdx(0)}
-            />
-          </figure>
-        </div>
+        {project?.images?.length > 0 && project.images[0] && (
+          <div className="mb-8 rounded-lg overflow-hidden">
+            <figure className="mb-4 w-full flex justify-center">
+              <img
+                src={project.images[0]}
+                alt={`${project.title} screenshot`}
+                className="
+                  w-full
+                  max-w-md
+                  sm:max-w-xl
+                  rounded-lg
+                  cursor-pointer
+                  object-contain
+                "
+                onClick={() => setSelectedImageIdx(0)}
+              />
+            </figure>
+          </div>
+        )}
 
         {/* Technologies */}
         <div className="mb-8">
           <h3 className="text-2xl font-bold mb-4">Technologies</h3>
           <div className="flex flex-wrap gap-3">
             {project.technologies.map((tech, idx) => (
-              <span key={idx} className="badge badge-lg badge-[#572e54]">
+              <span
+                key={idx}
+                className="
+                  badge
+                  badge-md
+                  sm:badge-lg
+                  bg-[#572e54]
+                  text-[#FAE5D8]
+                  border-0
+                ">
                 {tech}
               </span>
             ))}
@@ -89,8 +110,7 @@ export default function ProjectDetail() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-[#572e54]"
-            >
+              className="btn bg-[#572e54] hover:bg-[#4a2547] text-white">
               View Project <MoveRight />
             </a>
           </div>
@@ -100,44 +120,41 @@ export default function ProjectDetail() {
       {/* Image Modal */}
       {selectedImageIdx !== null && (
         <div className="modal modal-open">
-          <div className="modal-box max-w-4xl relative">
+          <div className="modal-box max-w-full sm:max-w-4xl p-4 relative">
             <button
-              className="btn btn-sm btn-circle absolute right-2 top-2"
-              onClick={() => setSelectedImageIdx(null)}
-            >
-              <X size={20} />
+              className="btn btn-sm btn-circle absolute right-3 top-3 z-10"
+              onClick={() => setSelectedImageIdx(null)}>
+              <X size={18} />
             </button>
 
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
-                className="btn btn-circle btn-lg"
-                onClick={handlePrevImage}
-              >
+                className="btn btn-circle btn-md sm:btn-lg"
+                onClick={handlePrevImage}>
                 <ChevronLeft size={24} />
               </button>
 
               <div className="flex-1">
                 <img
                   src={project.images[selectedImageIdx]}
-                  alt={`${project.title} screenshot ${selectedImageIdx + 1}`}
-                  className="max-w-full rounded-lg"
-                  style={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                    display: "block",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
+                  alt={`${project.title} screenshot`}
+                  className="
+                    max-w-full
+                    max-h-[60vh]
+                    sm:max-h-[75vh]
+                    object-contain
+                    rounded-lg
+                  "
                 />
+
                 <p className="text-center mt-4 text-sm">
                   {selectedImageIdx + 1} / {project.images.length}
                 </p>
               </div>
 
               <button
-                className="btn btn-circle btn-lg"
-                onClick={handleNextImage}
-              >
+                className="btn btn-circle btn-md sm:btn-lg"
+                onClick={handleNextImage}>
                 <ChevronRight size={24} />
               </button>
             </div>

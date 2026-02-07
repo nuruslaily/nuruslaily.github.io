@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+import { Menu } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export default function Navigation() {
   const [isDark, setIsDark] = useState(false);
+  const location = useLocation();
+
+  const isProjectDetail = location.pathname.startsWith("/project/");
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") === "dark";
@@ -23,42 +28,86 @@ export default function Navigation() {
     );
   };
 
+  const navLink = (to: string, label: string) => (
+    <Link
+      to={to}
+      smooth
+      duration={500}
+      offset={-80}
+      className="cursor-pointer block px-2 py-1"
+      onClick={() => {
+        (document.activeElement as HTMLElement | null)?.blur();
+      }}>
+      {label}
+    </Link>
+  );
+
   return (
-    <div className="navbar bg-[#522959] text-[#FAE5D8] shadow-lg">
+    <div className="navbar bg-[#522959] text-[#FAE5D8] shadow-lg fixed top-0 z-50 px-4">
+      {/* LEFT */}
       <div className="flex-1">
-        <Link to="/" className="btn btn-ghost text-lg font-bold">
+        <a href="/" className="btn btn-ghost text-sm lg:text-lg font-bold">
           Nurus Laily Aprilia
-        </Link>
+        </a>
       </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1 gap-2">
-          <li>
-            <label className="flex items-center cursor-pointer gap-2 ml-2 bg-transparent">
-              <input
-                type="checkbox"
-                checked={isDark}
-                onChange={toggleDarkMode}
-                className="toggle border-[#180018] bg-[#824D69] text-[#180018] checked:bg-[#2A114B] checked:text-[#DFB6B2]"
-              />
-              <span className="text-xl">{isDark ? "🌙" : "☀️"}</span>
-            </label>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+
+      {/* RIGHT */}
+      <div className="flex-none flex items-center gap-2">
+        {/* Dark mode selalu tampil */}
+        <label className="flex items-center cursor-pointer gap-2">
+          <input
+            type="checkbox"
+            checked={isDark}
+            onChange={toggleDarkMode}
+            className="toggle"
+          />
+          <span className="text-xl">{isDark ? "🌙" : "☀️"}</span>
+        </label>
+
+        {/* Menu hanya muncul jika BUKAN project detail */}
+        {!isProjectDetail && (
+          <>
+            {/* Mobile */}
+            <div className="dropdown dropdown-end lg:hidden">
+              <label tabIndex={0} className="btn btn-ghost cursor-pointer">
+                <Menu />
+              </label>
+
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#522959] rounded-box w-40">
+                <li>{navLink("home", "Home")}</li>
+                <li>{navLink("about", "About")}</li>
+                <li>{navLink("projects", "Projects")}</li>
+                <li>{navLink("contact", "Contact")}</li>
+              </ul>
+            </div>
+
+            {/* Desktop */}
+            <ul className="menu menu-horizontal hidden lg:flex gap-2">
+              <li>
+                <Link to="home" smooth>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="about" smooth>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="projects" smooth>
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="contact" smooth>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );

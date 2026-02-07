@@ -1,6 +1,9 @@
-import pointid1 from "../assets/images/pointid1.jpeg";
-import pointid2 from "../assets/images/pointid2.jpeg";
-import pointid3 from "../assets/images/pointid3.jpeg";
+import cmms from "../assets/images/cmms.jpeg";
+import pjt from "../assets/images/pjt.png";
+import pjt2 from "../assets/images/pjt2.png";
+import sid from "../assets/images/sid.jpeg";
+import tekno from "../assets/images/tekno.png";
+import tekno2 from "../assets/images/tekno2.png";
 export const projects = [
   {
     id: 1,
@@ -10,41 +13,65 @@ export const projects = [
     detailDescription:
       "Point.ID is a comprehensive loyalty point agent application designed for loyal customers of registered merchants. The application provides seamless integration with merchant systems, allowing users to track, accumulate, and redeem loyalty points across multiple merchant partners. Built with Flutter for cross-platform mobile support, utilizing Golang backend services and REST API for robust and scalable operations.",
     technologies: ["Flutter", "Dart", "Rest API"],
-    images: [
-      pointid1,
-      pointid2,
-      pointid3,
-    ],
-    link: "https://github.com/capstone-kelompok-25/loyalty-point-agent",
+    images: [],
+    link: "#",
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "Fullstack application with realtime features",
+    title: "CMMS JX Nippon Oil",
+    description: "Computerized Maintenance Management System (CMMS)",
     detailDescription:
-      "A comprehensive fullstack application featuring real-time data synchronization and collaborative features. This project demonstrates modern web architecture with a robust backend handling concurrent requests and a responsive frontend for seamless user experience.",
-    technologies: ["Node.js", "React", "PostgreSQL"],
-    images: [
-      "https://img.daisyui.com/images/stock/daisyui-hat-1.webp",
-      "https://img.daisyui.com/images/stock/daisyui-hat-2.webp",
-      "https://img.daisyui.com/images/stock/daisyui-hat-3.webp",
-      "https://img.daisyui.com/images/stock/daisyui-hat-4.webp",
-    ],
+      "Developing Computerized Maintenance Management System (CMMS) at Production PT. JX Nippon Oil (JX Group).",
+    technologies: ["Codeigniter", "PHP", "MySQL"],
+    images: [cmms],
     link: "#",
   },
   {
     id: 3,
-    title: "Project Three",
-    description: "Interactive data visualization dashboard",
+    title: "PJT Telemetry System",
+    description: "Smart monitoring dashboard IoT",
     detailDescription:
-      "An interactive dashboard for visualizing complex datasets with multiple chart types and real-time data updates. The application provides intuitive controls for filtering and exploring data from various API sources.",
-    technologies: ["React", "D3.js", "API Integration"],
-    images: [
-      "https://img.daisyui.com/images/stock/daisyui-hat-1.webp",
-      "https://img.daisyui.com/images/stock/daisyui-hat-2.webp",
-      "https://img.daisyui.com/images/stock/daisyui-hat-3.webp",
-      "https://img.daisyui.com/images/stock/daisyui-hat-4.webp",
-    ],
+      "The PJT Telemetry System is a smart monitoring solution designed for real-time data acquisition, visualization, and alerting across water resource infrastructure managed by Perum Jasa Tirta (PJT). This system enables remote monitoring of key environmental parameters including Automatic Water Level Recorder (AWLR), Automatic Rainfall Recorder (ARR), Water Quality Monitoring System (WQMS), climatological data, Ground Water Level (GWL), and seepage measurements.",
+    technologies: ["Codeigniter", "PHP", "MySQL"],
+    images: [pjt, pjt2],
     link: "#",
+  },
+  {
+    id: 4,
+    title: "SID Integrated",
+    description: "Smart Information Display",
+    detailDescription: `• Redevelop Smart Information Display (SID) at Quality Assurance Production Pertamina Unit Cilacap (PUC), Pertamina Unit Gresik (PUG) & Pertamina Unit Jakarta (PUJ).
+• Integrate SID with SiAP (Sistem Administrasi Pertamina).`,
+    technologies: [
+      "React",
+      "Typescript",
+      "MySQL",
+      "REST API",
+      "PostgreSQL",
+      "Vite.js",
+      "Material UI",
+    ],
+    images: [sid],
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "WMS (Warehouse Management System)",
+    description: "Warehouse Management System",
+    detailDescription:
+      "Developed a scalable Warehouse Management System (WMS) to optimize inventory control, streamline stock movement, and integrate multi-location data in real-time. Designed for high-demand environments such as industrial and logistics sectors, including enterprise-level clients such as Pertamina Lubricants Production Unit Jakarta (PUJ), Gresik (PUG), and Cilacap (PUC).",
+    technologies: ["Codeigniter", "PHP", "MySQL"],
+    images: [],
+    link: "#",
+  },
+  {
+    id: 6,
+    title: "PT Tekno Klop Indonesia",
+    description: "A Company Profile Website",
+    detailDescription:
+      "A company profile website developed for PT Tekno Klop Indonesia to showcase the company’s profile, services, and products. The website features a modern, responsive design to enhance the company’s online presence and provide clear information for clients and business partners.",
+    technologies: ["React", "Typescript", "MySQL", "REST API", "Vite.js", "Tailwind CSS"],
+    images: [tekno, tekno2],
+    link: "https://teknoklop.com/",
   },
 ];
