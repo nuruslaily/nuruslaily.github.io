@@ -52,35 +52,54 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md">
+        <div
+          className="
+            flex gap-4
+            overflow-x-auto
+            pb-4
+            snap-x snap-mandatory
+            no-scrollbar
+          ">
+          <p className="text-sm text-center mt-2 opacity-70">
+            Swipe → to see more
+          </p>
+          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Experience</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>IT Developer at PT Tekno Klop Indonesia</li>
+                <li>Mobile Volunteer at TSA DTS Kominfo</li>
+                <li>IoT Intern at TEFA HUB</li>
                 <li>EEPROM Organization member</li>
-                <li>TEFA IoT program participant</li>
               </ul>
             </div>
           </div>
 
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md">
+          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Education</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Bachelor – State Polytechnic of Malang</li>
-                <li>Dicoding & Alterra Academy</li>
+                <li>Bachelor of Engineering – Polinema</li>
               </ul>
             </div>
           </div>
 
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md">
+          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
+            <div className="card-body">
+              <h3 className="card-title">Certificate</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Dicoding Indonesia (React, Flutter)</li>
+                <li>Alterra Academy</li>
+                <li>BNSP</li>
+                <li>Introduction to Front-End Development (Coursera)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Passion</h3>
-              <p>
-                Clean code, great UX, and keeping up with modern web
-                development.
-              </p>
+              <p>Clean code, great UX, modern web development.</p>
             </div>
           </div>
         </div>
