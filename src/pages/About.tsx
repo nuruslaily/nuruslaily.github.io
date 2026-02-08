@@ -45,6 +45,19 @@ export default function About() {
               onClick={() => setIsModalOpen(true)}
             />
           )}
+          <div
+            className="
+              absolute
+              -inset-6
+              bg-linear-to-br
+              from-[#824D69]
+              to-[#2A114B]
+              rounded-2xl
+              blur-2xl
+              opacity-30
+              -z-10
+            "
+          />
 
           {images?.length > 1 && (
             <div className="flex gap-4 mt-6">
