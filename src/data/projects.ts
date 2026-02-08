@@ -1,9 +1,9 @@
-import cmms from "../assets/images/cmms.jpeg";
-import pjt from "../assets/images/pjt.png";
-import pjt2 from "../assets/images/pjt2.png";
-import sid from "../assets/images/sid.jpeg";
-import tekno from "../assets/images/tekno.png";
-import tekno2 from "../assets/images/tekno2.png";
+import cmms from "../assets/images/cmms.webp";
+import pjt from "../assets/images/pjt.webp";
+import pjt2 from "../assets/images/pjt2.webp";
+import sid from "../assets/images/sid.webp";
+import tekno from "../assets/images/tekno.webp";
+import tekno2 from "../assets/images/tekno2.webp";
 export const projects = [
   {
     id: 1,

@@ -44,16 +44,13 @@ export default function Navigation() {
 
   return (
     <div className="navbar bg-[#522959] text-[#FAE5D8] shadow-lg fixed top-0 z-50 px-4">
-      {/* LEFT */}
       <div className="flex-1">
         <a href="/" className="btn btn-ghost text-sm lg:text-lg font-bold">
           Nurus Laily Aprilia
         </a>
       </div>
 
-      {/* RIGHT */}
       <div className="flex-none flex items-center gap-2">
-        {/* Dark mode selalu tampil */}
         <label className="flex items-center cursor-pointer gap-2">
           <input
             type="checkbox"
@@ -64,10 +61,8 @@ export default function Navigation() {
           <span className="text-xl">{isDark ? "🌙" : "☀️"}</span>
         </label>
 
-        {/* Menu hanya muncul jika BUKAN project detail */}
         {!isProjectDetail && (
           <>
-            {/* Mobile */}
             <div className="dropdown dropdown-end lg:hidden">
               <label tabIndex={0} className="btn btn-ghost cursor-pointer">
                 <Menu />
