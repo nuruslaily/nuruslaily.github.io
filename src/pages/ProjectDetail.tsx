@@ -53,7 +53,6 @@ export default function ProjectDetail() {
           {project.title}
         </h1>
 
-        {/* Project Images Gallery */}
         {project?.images?.length > 0 && project.images[0] && (
           <div className="mb-8 rounded-lg overflow-hidden">
             <figure className="mb-4 w-full flex justify-center">
@@ -74,7 +73,6 @@ export default function ProjectDetail() {
           </div>
         )}
 
-        {/* Technologies */}
         <div className="mb-8">
           <h3 className="text-2xl font-bold mb-4">Technologies</h3>
           <div className="flex flex-wrap gap-3">
@@ -95,7 +93,6 @@ export default function ProjectDetail() {
           </div>
         </div>
 
-        {/* Detailed Description */}
         <div className="mb-8">
           <h3 className="text-2xl font-bold mb-4">About This Project</h3>
           <p className="text-lg leading-relaxed text-base-content/80">
@@ -103,7 +100,6 @@ export default function ProjectDetail() {
           </p>
         </div>
 
-        {/* External Link (if available) */}
         {project.link !== "#" ? (
           <div className="mb-8">
             <a
@@ -117,7 +113,6 @@ export default function ProjectDetail() {
         ) : null}
       </article>
 
-      {/* Image Modal */}
       {selectedImageIdx !== null && (
         <div className="modal modal-open">
           <div className="modal-box max-w-full sm:max-w-4xl p-4 relative">

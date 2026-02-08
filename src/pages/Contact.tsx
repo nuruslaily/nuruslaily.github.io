@@ -9,7 +9,6 @@ import {
 import { useState } from "react";
 
 export default function Contact() {
-  // const [isDark, setIsDark] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,15 +26,6 @@ export default function Contact() {
     console.log("Form submitted:", formData);
     setFormData({ name: "", email: "", message: "" });
   };
-
-  // useEffect(() => {
-  //   const saved = localStorage.getItem("theme") === "dark";
-  //   setIsDark(saved);
-  //   document.documentElement.setAttribute(
-  //     "data-theme",
-  //     saved ? "dark" : "light",
-  //   );
-  // }, []);
 
   return (
     <div className="container mx-auto px-4 py-30">

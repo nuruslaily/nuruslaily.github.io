@@ -4,6 +4,8 @@ import pjt2 from "../assets/images/pjt2.webp";
 import sid from "../assets/images/sid.webp";
 import tekno from "../assets/images/tekno.webp";
 import tekno2 from "../assets/images/tekno2.webp";
+import mockup_pointid from "../assets/images/mockup-pointid.webp"
+import mockup_pjt from "../assets/images/mockup-pjt.webp"
 export const projects = [
   {
     id: 1,
@@ -13,7 +15,7 @@ export const projects = [
     detailDescription:
       "Point.ID is a comprehensive loyalty point agent application designed for loyal customers of registered merchants. The application provides seamless integration with merchant systems, allowing users to track, accumulate, and redeem loyalty points across multiple merchant partners. Built with Flutter for cross-platform mobile support, utilizing Golang backend services and REST API for robust and scalable operations.",
     technologies: ["Flutter", "Dart", "Rest API"],
-    images: [],
+    images: [mockup_pointid],
     link: "#",
   },
   {
@@ -32,8 +34,8 @@ export const projects = [
     description: "Smart monitoring dashboard IoT",
     detailDescription:
       "The PJT Telemetry System is a smart monitoring solution designed for real-time data acquisition, visualization, and alerting across water resource infrastructure managed by Perum Jasa Tirta (PJT). This system enables remote monitoring of key environmental parameters including Automatic Water Level Recorder (AWLR), Automatic Rainfall Recorder (ARR), Water Quality Monitoring System (WQMS), climatological data, Ground Water Level (GWL), and seepage measurements.",
-    technologies: ["Codeigniter", "PHP", "MySQL"],
-    images: [pjt, pjt2],
+    technologies: ["Codeigniter", "PHP", "MySQL", "Flutter", "Dart"],
+    images: [pjt, pjt2, mockup_pjt],
     link: "#",
   },
   {

@@ -1,17 +1,27 @@
 import { useState } from "react";
 import { aboutData } from "../data/about";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 export default function About() {
   const [selectedImageIdx, setSelectedImageIdx] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = aboutData.images;
 
   const handlePrevImage = () => {
-    setSelectedImageIdx((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    if (selectedImageIdx !== null) {
+      setSelectedImageIdx((prev) =>
+        prev === 0 ? images.length - 1 : prev! - 1,
+      );
+    }
   };
 
   const handleNextImage = () => {
-    setSelectedImageIdx((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    if (selectedImageIdx !== null) {
+      setSelectedImageIdx((prev) =>
+        prev === images.length - 1 ? 0 : prev! + 1,
+      );
+    }
   };
 
   return (
@@ -27,29 +37,29 @@ export default function About() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="flex justify-center">
-          <div className="relative">
+        <div className="relative flex flex-col items-center">
+          {images?.length > 0 && (
             <img
               src={images[selectedImageIdx]}
-              alt="About gallery"
-              className="w-80 max-h-120 rounded-2xl shadow-xl cursor-pointer"
+              className=" w-90 max-h-60 rounded-2xl shadow-xl cursor-pointer object-top object-cover"
+              onClick={() => setIsModalOpen(true)}
             />
-            <div className="absolute -inset-4 bg-linear-to-br from-[#824D69] to-[#2A114B] rounded-2xl blur-xl opacity-30 -z-10" />
-            {images.length > 1 && (
-              <div className="flex justify-between mt-4">
-                <button
-                  onClick={handlePrevImage}
-                  className="btn btn-sm bg-[#2A114B] text-[#FAE5D8]">
-                  Prev
-                </button>
-                <button
-                  onClick={handleNextImage}
-                  className="btn btn-sm bg-[#2A114B] text-[#FAE5D8]">
-                  Next
-                </button>
-              </div>
-            )}
-          </div>
+          )}
+
+          {images?.length > 1 && (
+            <div className="flex gap-4 mt-6">
+              <button
+                onClick={handlePrevImage}
+                className="btn btn-sm bg-[#2A114B] hover:bg-[#180018] text-[#FAE5D8]">
+                Prev
+              </button>
+              <button
+                onClick={handleNextImage}
+                className="btn btn-sm bg-[#2A114B] hover:bg-[#180018] text-[#FAE5D8]">
+                Next
+              </button>
+            </div>
+          )}
         </div>
 
         <div
@@ -88,9 +98,11 @@ export default function About() {
             <div className="card-body">
               <h3 className="card-title">Certificate</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Dicoding Indonesia (React, Flutter)</li>
+                <li>Dicoding Indonesia (React, Javascript, Flutter)</li>
                 <li>Alterra Academy</li>
+                <li>Codepolitan</li>
                 <li>BNSP</li>
+                <li>HackerRank</li>
                 <li>Introduction to Front-End Development (Coursera)</li>
               </ul>
             </div>
@@ -104,6 +116,46 @@ export default function About() {
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <div className="modal modal-open">
+          <div className="modal-box max-w-full sm:max-w-4xl p-4 relative">
+            <button
+              className="btn btn-sm btn-circle absolute right-3 top-3 z-10"
+              onClick={() => setIsModalOpen(false)}>
+              <X size={18} />
+            </button>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button
+                className="btn btn-circle btn-md sm:btn-lg"
+                onClick={handlePrevImage}>
+                <ChevronLeft size={24} />
+              </button>
+
+              <div className="flex flex-1 flex-col items-center">
+                <img
+                  src={images[selectedImageIdx]}
+                  className="max-w-full max-h-[60vh] sm:max-h-[75vh] object-contain rounded-lg"
+                />
+                <p className="text-center mt-4 text-sm">
+                  {selectedImageIdx + 1} / {images.length}
+                </p>
+              </div>
+
+              <button
+                className="btn btn-circle btn-md sm:btn-lg"
+                onClick={handleNextImage}>
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            className="modal-backdrop"
+            onClick={() => setIsModalOpen(false)}
+          />
+        </div>
+      )}
     </div>
   );
 }
