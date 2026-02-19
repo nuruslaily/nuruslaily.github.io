@@ -47,7 +47,10 @@ export default function Navigation() {
     // <div className="navbar bg-[#384C65] text-[#FAE5D8] shadow-lg fixed top-0 z-50 px-4">
     <div className="navbar bg-[#384C65] text-[#C0C9DB] shadow-lg fixed top-0 z-50 px-4">
       <div className="flex-1">
-        <a href="/" className="btn btn-ghost text-sm lg:text-lg font-bold">
+        <a
+          href="/"
+          className="btn btn-ghost hover:bg-[#C0C9DB] hover:text-[#384C65] hover:shadow text-sm lg:text-lg font-bold"
+        >
           Nurus Laily Aprilia
         </a>
       </div>
@@ -72,7 +75,7 @@ export default function Navigation() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#384C65] rounded-box w-40"
+                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#384C65] hover:bg-[#C0C9DB] hover:text-[#384C65] rounded-box w-40"
               >
                 <li>{navLink("home", "Home")}</li>
                 <li>{navLink("about", "About")}</li>
