@@ -83,10 +83,11 @@ export default function ProjectDetail() {
                   badge
                   badge-md
                   sm:badge-lg
-                  bg-[#572e54]
-                  text-[#FAE5D8]
+                  bg-[#384C65]
+                  text-[#C0C9DB]
                   border-0
-                ">
+                "
+              >
                 {tech}
               </span>
             ))}
@@ -106,7 +107,8 @@ export default function ProjectDetail() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-[#572e54] hover:bg-[#4a2547] text-white">
+              className="btn bg-[#572e54] hover:bg-[#4a2547] text-white"
+            >
               View Project <MoveRight />
             </a>
           </div>
@@ -118,14 +120,16 @@ export default function ProjectDetail() {
           <div className="modal-box max-w-full sm:max-w-4xl p-4 relative">
             <button
               className="btn btn-sm btn-circle absolute right-3 top-3 z-10"
-              onClick={() => setSelectedImageIdx(null)}>
+              onClick={() => setSelectedImageIdx(null)}
+            >
               <X size={18} />
             </button>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 className="btn btn-circle btn-md sm:btn-lg"
-                onClick={handlePrevImage}>
+                onClick={handlePrevImage}
+              >
                 <ChevronLeft size={24} />
               </button>
 
@@ -149,7 +153,8 @@ export default function ProjectDetail() {
 
               <button
                 className="btn btn-circle btn-md sm:btn-lg"
-                onClick={handleNextImage}>
+                onClick={handleNextImage}
+              >
                 <ChevronRight size={24} />
               </button>
             </div>

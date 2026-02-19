@@ -37,7 +37,7 @@ export default function Contact() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div className="card bg-[#824D69] text-[#180018] dark:text-[#FAE5D8] shadow-xl">
+        <div className="card bg-[#485F88] text-[#180018] dark:text-[#C0C9DB] shadow-xl">
           <div className="card-body">
             <h3 className="card-title mb-4">Send me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -66,23 +66,26 @@ export default function Contact() {
                 className="textarea textarea-bordered w-full text-base-content/80"
                 value={formData.message}
                 onChange={handleChange}
-                required></textarea>
+                required
+              ></textarea>
               <button
                 type="submit"
-                className="btn bg-[#2A114B] border-0 hover:bg-[#180018] dark:text-[#FAE5D8] w-full">
+                className="btn bg-[#121524] border-0 hover:bg-[#180018] dark:text-[#C0C9DB] w-full"
+              >
                 Send Message
               </button>
             </form>
           </div>
         </div>
 
-        <div className="card bg-[#824D69] text-[#FAE5D8] shadow-xl">
+        <div className="card bg-[#485F88] text-[#C0C9DB] shadow-xl">
           <div className="card-body">
             <h3 className="card-title mb-4">Other Ways to Connect</h3>
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:nuruslaily88@gmail.com"
-                className="btn btn-outline">
+                className="btn btn-outline"
+              >
                 <Mail />
                 Email
               </a>
@@ -90,21 +93,24 @@ export default function Contact() {
                 href="https://github.com/nuruslaily"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline">
+                className="btn btn-outline"
+              >
                 <Github /> GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/nurus-laily-aprilia-5a553620a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline">
+                className="btn btn-outline"
+              >
                 <Linkedin /> LinkedIn
               </a>
               <a
                 href="https://web.facebook.com/nuruslailyaprillia/?locale=id_ID"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline">
+                className="btn btn-outline"
+              >
                 <Facebook />
                 Facebook
               </a>
@@ -112,7 +118,8 @@ export default function Contact() {
                 href="https://www.instagram.com/nuruslailya/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline">
+                className="btn btn-outline"
+              >
                 <Instagram />
                 Instagram
               </a>
@@ -120,7 +127,8 @@ export default function Contact() {
                 href="https://www.threads.com/@nuruslailya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline">
+                className="btn btn-outline"
+              >
                 <AtSign />
                 Threads
               </a>

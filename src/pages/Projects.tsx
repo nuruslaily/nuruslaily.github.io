@@ -10,7 +10,8 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-xl hover:shadow-2xl transition-shadow">
+            className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-xl hover:shadow-2xl transition-shadow"
+          >
             <div className="card-body">
               <h3 className="card-title">{project.title}</h3>
               <p>{project.description}</p>
@@ -18,7 +19,8 @@ export default function Projects() {
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="badge bg-[#2A114B] border-0 hover:bg-[#180018] text-[#180018] dark:text-[#FAE5D8] badge-sm">
+                    className="badge bg-[#121524] border-0 hover:bg-[#180018] text-[#180018] dark:text-[#C0C9DB] badge-sm"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -26,7 +28,8 @@ export default function Projects() {
               <div className="card-actions justify-start">
                 <Link
                   to={`/project/${project.id}`}
-                  className="btn bg-[#2A114B] border-0 hover:bg-[#180018] text-[#180018] dark:text-[#FAE5D8] btn-sm">
+                  className="btn bg-[#121524] border-0 hover:bg-[#180018] text-[#180018] dark:text-[#C0C9DB] btn-sm"
+                >
                   View Details <MoveRight />
                 </Link>
               </div>
