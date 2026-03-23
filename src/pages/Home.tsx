@@ -34,10 +34,9 @@ export default function Home() {
                 className="
                   btn cursor-pointer
                   bg-[#121524] hover:bg-[#384C65]
-                  dark:bg-[#384C65] dark:hover:bg-[#180018]
+                  dark:bg-[#384C65] dark:hover:bg-[#121524]
                   text-[#C0C9DB] border-0
-                "
-              >
+                ">
                 View My Work
               </Link>
               <a
@@ -46,10 +45,9 @@ export default function Home() {
                 className="
                   btn cursor-pointer ml-2
                   bg-[#485F88] hover:bg-[#121524]
-                  dark:bg-[#485F88] dark:hover:bg-[#180018]
+                  dark:bg-[#485F88] dark:hover:bg-[#121524]
                   text-[#C0C9DB] border-0
-                "
-              >
+                ">
                 Download Resume
               </a>
             </div>

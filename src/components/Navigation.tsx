@@ -37,8 +37,7 @@ export default function Navigation() {
       className="cursor-pointer block px-2 py-1"
       onClick={() => {
         (document.activeElement as HTMLElement | null)?.blur();
-      }}
-    >
+      }}>
       {label}
     </Link>
   );
@@ -49,8 +48,7 @@ export default function Navigation() {
       <div className="flex-1">
         <a
           href="/"
-          className="btn btn-ghost hover:bg-[#C0C9DB] hover:text-[#384C65] hover:shadow text-sm lg:text-lg font-bold"
-        >
+          className="btn btn-ghost hover:bg-[#C0C9DB] hover:text-[#384C65] hover:shadow text-sm lg:text-lg font-bold">
           Nurus Laily Aprilia
         </a>
       </div>
@@ -75,8 +73,7 @@ export default function Navigation() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#384C65] hover:bg-[#C0C9DB] hover:text-[#384C65] rounded-box w-40"
-              >
+                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#384C65] hover:bg-[#C0C9DB]  hover:text-[#384C65] rounded-box w-40">
                 <li>{navLink("home", "Home")}</li>
                 <li>{navLink("about", "About")}</li>
                 <li>{navLink("projects", "Projects")}</li>
@@ -86,22 +83,22 @@ export default function Navigation() {
 
             {/* Desktop */}
             <ul className="menu menu-horizontal hidden lg:flex gap-2">
-              <li>
+              <li className="hover:bg-[#121524] rounded-box">
                 <Link to="home" smooth>
                   Home
                 </Link>
               </li>
-              <li>
+              <li className="hover:bg-[#121524] rounded-box">
                 <Link to="about" smooth>
                   About
                 </Link>
               </li>
-              <li>
+              <li className="hover:bg-[#121524] rounded-box">
                 <Link to="projects" smooth>
                   Projects
                 </Link>
               </li>
-              <li>
+              <li className="hover:bg-[#121524] rounded-box">
                 <Link to="contact" smooth>
                   Contact
                 </Link>
