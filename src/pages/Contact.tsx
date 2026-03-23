@@ -23,7 +23,16 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    const { name, email, message } = formData;
+    const subject = encodeURIComponent("Pesan dari situs portofolio");
+    const body = encodeURIComponent(
+      `Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`,
+    );
+
+    const mailto = `mailto:nuruslaily88@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailto;
+
     setFormData({ name: "", email: "", message: "" });
   };
 
