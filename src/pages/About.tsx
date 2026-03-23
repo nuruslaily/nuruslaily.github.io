@@ -50,8 +50,8 @@ export default function About() {
               absolute
               -inset-6
               bg-linear-to-br
-              from-[#824D69]
-              to-[#2A114B]
+              from-[#485F88]
+              to-[#121524]
               rounded-2xl
               blur-2xl
               opacity-30
@@ -63,12 +63,14 @@ export default function About() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={handlePrevImage}
-                className="btn btn-sm bg-[#2A114B] hover:bg-[#180018] text-[#FAE5D8]">
+                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#C0C9DB]"
+              >
                 Prev
               </button>
               <button
                 onClick={handleNextImage}
-                className="btn btn-sm bg-[#2A114B] hover:bg-[#180018] text-[#FAE5D8]">
+                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#C0C9DB]"
+              >
                 Next
               </button>
             </div>
@@ -82,11 +84,12 @@ export default function About() {
             pb-4
             snap-x snap-mandatory
             no-scrollbar
-          ">
+          "
+        >
           <p className="text-sm text-center mt-2 opacity-70">
             Swipe → to see more
           </p>
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Experience</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -98,7 +101,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Education</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -107,7 +110,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Certificate</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -121,7 +124,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="card bg-[#824D69] dark:text-[#FAE5D8] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Passion</h3>
               <p>Clean code, great UX, modern web development.</p>
@@ -134,14 +137,16 @@ export default function About() {
           <div className="modal-box max-w-full sm:max-w-4xl p-4 relative">
             <button
               className="btn btn-sm btn-circle absolute right-3 top-3 z-10"
-              onClick={() => setIsModalOpen(false)}>
+              onClick={() => setIsModalOpen(false)}
+            >
               <X size={18} />
             </button>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 className="btn btn-circle btn-md sm:btn-lg"
-                onClick={handlePrevImage}>
+                onClick={handlePrevImage}
+              >
                 <ChevronLeft size={24} />
               </button>
 
@@ -157,7 +162,8 @@ export default function About() {
 
               <button
                 className="btn btn-circle btn-md sm:btn-lg"
-                onClick={handleNextImage}>
+                onClick={handleNextImage}
+              >
                 <ChevronRight size={24} />
               </button>
             </div>

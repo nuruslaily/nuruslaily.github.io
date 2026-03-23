@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <>
       <section id="home">
-        <div className="hero min-h-screen bg-linear-to-br from-[#824D69] via-[#522959] to-[#2A114B] text-primary-content">
+        {/* <div className="hero min-h-screen bg-linear-to-br from-[#824D69] via-[#522959] to-[#2A114B] text-primary-content"> */}
+        <div className="hero min-h-screen bg-linear-to-br from-[#485F88] via-[#384C65] to-[#121524] text-primary-content">
           <div className="hero-content flex-col lg:flex-row-reverse">
             {/* <img
               src={profileImage}
@@ -32,10 +33,11 @@ export default function Home() {
                 duration={500}
                 className="
                   btn cursor-pointer
-                  bg-[#2A114B] hover:bg-[#522959]
-                  dark:bg-[#522959] dark:hover:bg-[#180018]
-                  text-[#FAE5D8] border-0
-                ">
+                  bg-[#121524] hover:bg-[#384C65]
+                  dark:bg-[#384C65] dark:hover:bg-[#180018]
+                  text-[#C0C9DB] border-0
+                "
+              >
                 View My Work
               </Link>
               <a
@@ -43,10 +45,11 @@ export default function Home() {
                 download
                 className="
                   btn cursor-pointer ml-2
-                  bg-[#824D69] hover:bg-[#2A114B]
-                  dark:bg-[#824D69] dark:hover:bg-[#180018]
-                  text-[#FAE5D8] border-0
-                ">
+                  bg-[#485F88] hover:bg-[#121524]
+                  dark:bg-[#485F88] dark:hover:bg-[#180018]
+                  text-[#C0C9DB] border-0
+                "
+              >
                 Download Resume
               </a>
             </div>
