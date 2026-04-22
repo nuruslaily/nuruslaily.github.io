@@ -37,10 +37,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-30 dark:text-[#eceee3]">
+    <div className="container mx-auto px-4 py-30 ">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
-        <h5 className="dark:text-[#eceee3]">
+        <h5 className="text-lg max-w-2xl mx-auto">
           I'm always interested in hearing about new projects and opportunities.
         </h5>
       </div>

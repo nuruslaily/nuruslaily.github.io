@@ -27,10 +27,8 @@ export default function About() {
   return (
     <div className="container mx-auto px-4 py-30">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-6 dark:text-[#eceee3]">
-          About Me
-        </h2>
-        <p className="text-lg dark:text-[#eceee3] max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold mb-6">About Me</h2>
+        <p className="text-lg max-w-2xl mx-auto">
           I'm a dedicated developer with a passion for creating elegant
           solutions to complex problems. With experience in modern web
           technologies, I strive to build applications that are not only
