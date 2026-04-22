@@ -12,20 +12,31 @@ export default function Navigation() {
   useEffect(() => {
     const saved = localStorage.getItem("theme") === "dark";
     setIsDark(saved);
+
+    // DaisyUI
     document.documentElement.setAttribute(
       "data-theme",
       saved ? "dark" : "light",
     );
+
+    // Tailwind
+    document.documentElement.classList.toggle("dark", saved);
   }, []);
 
   const toggleDarkMode = () => {
     const newDark = !isDark;
     setIsDark(newDark);
+
     localStorage.setItem("theme", newDark ? "dark" : "light");
+
+    // DaisyUI
     document.documentElement.setAttribute(
       "data-theme",
       newDark ? "dark" : "light",
     );
+
+    // Tailwind (INI YANG PENTING)
+    document.documentElement.classList.toggle("dark", newDark);
   };
 
   const navLink = (to: string, label: string) => (
@@ -37,18 +48,20 @@ export default function Navigation() {
       className="cursor-pointer block px-2 py-1"
       onClick={() => {
         (document.activeElement as HTMLElement | null)?.blur();
-      }}>
+      }}
+    >
       {label}
     </Link>
   );
 
   return (
-    // <div className="navbar bg-[#384C65] text-[#FAE5D8] shadow-lg fixed top-0 z-50 px-4">
-    <div className="navbar bg-[#384C65] text-[#C0C9DB] shadow-lg fixed top-0 z-50 px-4">
-      <div className="flex-1">
+    // <div className="navbar bg-[#445c3f] text-[#FAE5D8] shadow-lg fixed top-0 z-50 px-4">
+    <div className="navbar bg-[#7d936c] text-[#eceee3] shadow-lg fixed top-0 z-50 px-4">
+      <div className="flex-1 mx-auto">
         <a
           href="/"
-          className="btn btn-ghost hover:bg-[#C0C9DB] hover:text-[#384C65] hover:shadow text-sm lg:text-lg font-bold">
+          className="hover:text-[#445c3f] hover:shadow text-sm lg:text-lg font-bold mx-auto lg:mx-0 transition-all duration-300"
+        >
           Nurus Laily Aprilia
         </a>
       </div>
@@ -59,7 +72,7 @@ export default function Navigation() {
             type="checkbox"
             checked={isDark}
             onChange={toggleDarkMode}
-            className="toggle"
+            className="toggle dark:bg-[#7d936c] dark:checked:bg-[#445c3f]"
           />
           <span className="text-xl">{isDark ? "🌙" : "☀️"}</span>
         </label>
@@ -73,7 +86,8 @@ export default function Navigation() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#384C65] hover:bg-[#C0C9DB]  hover:text-[#384C65] rounded-box w-40">
+                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#445c3f] hover:bg-[#eceee3]  hover:text-[#445c3f] rounded-box w-40"
+              >
                 <li>{navLink("home", "Home")}</li>
                 <li>{navLink("about", "About")}</li>
                 <li>{navLink("projects", "Projects")}</li>

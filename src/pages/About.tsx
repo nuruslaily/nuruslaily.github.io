@@ -27,8 +27,10 @@ export default function About() {
   return (
     <div className="container mx-auto px-4 py-30">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-6">About Me</h2>
-        <p className="text-lg text-base-content/80 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold mb-6 dark:text-[#eceee3]">
+          About Me
+        </h2>
+        <p className="text-lg dark:text-[#eceee3] max-w-2xl mx-auto">
           I'm a dedicated developer with a passion for creating elegant
           solutions to complex problems. With experience in modern web
           technologies, I strive to build applications that are not only
@@ -50,7 +52,7 @@ export default function About() {
               absolute
               -inset-6
               bg-linear-to-br
-              from-[#485F88]
+              from-[#445c3f]
               to-[#121524]
               rounded-2xl
               blur-2xl
@@ -63,13 +65,13 @@ export default function About() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={handlePrevImage}
-                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#C0C9DB]"
+                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#eceee3]"
               >
                 Prev
               </button>
               <button
                 onClick={handleNextImage}
-                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#C0C9DB]"
+                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#eceee3]"
               >
                 Next
               </button>
@@ -89,7 +91,7 @@ export default function About() {
           <p className="text-sm text-center mt-2 opacity-70">
             Swipe → to see more
           </p>
-          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#445c3f] text-[#eceee3] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Experience</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -101,7 +103,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#445c3f] text-[#eceee3] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Education</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -110,7 +112,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#445c3f] text-[#eceee3] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Certificate</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -124,7 +126,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="card bg-[#485F88] dark:text-[#C0C9DB] shadow-md min-w-65 snap-start">
+          <div className="card bg-[#445c3f] text-[#eceee3] shadow-md min-w-65 snap-start">
             <div className="card-body">
               <h3 className="card-title">Passion</h3>
               <p>Clean code, great UX, modern web development.</p>

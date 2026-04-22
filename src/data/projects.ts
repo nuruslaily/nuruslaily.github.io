@@ -4,8 +4,8 @@ import pjt2 from "../assets/images/pjt2.webp";
 import sid from "../assets/images/sid.webp";
 import tekno from "../assets/images/tekno.webp";
 import tekno2 from "../assets/images/tekno2.webp";
-import mockup_pointid from "../assets/images/mockup-pointid.webp"
-import mockup_pjt from "../assets/images/mockup-pjt.webp"
+import mockup_pointid from "../assets/images/mockup-pointid.webp";
+import mockup_pjt from "../assets/images/mockup-pjt.webp";
 export const projects = [
   {
     id: 1,
@@ -42,8 +42,7 @@ export const projects = [
     id: 4,
     title: "SID Integrated",
     description: "Smart Information Display",
-    detailDescription: `• Redevelop Smart Information Display (SID) at Quality Assurance Production Pertamina Unit Cilacap (PUC), Pertamina Unit Gresik (PUG) & Pertamina Unit Jakarta (PUJ).
-• Integrate SID with SiAP (Sistem Administrasi Pertamina).`,
+    detailDescription: `Redevelop Smart Information Display (SID) at Quality Assurance Production Pertamina Unit Cilacap (PUC), Pertamina Unit Gresik (PUG) & Pertamina Unit Jakarta (PUJ). Integrate SID with SiAP (Sistem Administrasi Pertamina).`,
     technologies: [
       "React",
       "Typescript",
@@ -72,7 +71,14 @@ export const projects = [
     description: "A Company Profile Website",
     detailDescription:
       "A company profile website developed for PT Tekno Klop Indonesia to showcase the company’s profile, services, and products. The website features a modern, responsive design to enhance the company’s online presence and provide clear information for clients and business partners.",
-    technologies: ["React", "Typescript", "MySQL", "REST API", "Vite.js", "Tailwind CSS"],
+    technologies: [
+      "React",
+      "Typescript",
+      "MySQL",
+      "REST API",
+      "Vite.js",
+      "Tailwind CSS",
+    ],
     images: [tekno, tekno2],
     link: "https://teknoklop.com/",
   },

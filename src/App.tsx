@@ -3,13 +3,14 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navigation />
       <Routes>
-        {/* One-page portfolio */}
         <Route path="/" element={<Home />} />
 
         {/* Detail project tetap boleh pakai route */}
