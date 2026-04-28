@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import { Link } from "react-scroll";
 import Resume from "../assets/file/Resume-Nurus-Laily-A.pdf";
 import { motion } from "framer-motion";
+import profileImage from "../assets/profile.jpg";
 
 export default function Home() {
   return (
@@ -18,11 +19,11 @@ export default function Home() {
           className="hero min-h-screen bg-[#445c3f] text-[#eceee3]"
         >
           <div className="hero-content flex-col lg:flex-row-reverse">
-            {/* <img
+            <img
               src={profileImage}
               className="w-50 rounded-lg shadow-2xl"
               alt="Profile"
-            /> */}
+            />
             <div className="max-w-lg text-center lg:text-left">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
