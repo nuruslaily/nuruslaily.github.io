@@ -6,6 +6,7 @@ import tekno from "../assets/images/tekno.webp";
 import tekno2 from "../assets/images/tekno2.webp";
 import mockup_pointid from "../assets/images/mockup-pointid.webp";
 import mockup_pjt from "../assets/images/mockup-pjt.webp";
+import travel from "../assets/images/travel-app.webp";
 export const projects = [
   {
     id: 1,
@@ -81,5 +82,15 @@ export const projects = [
     ],
     images: [tekno, tekno2],
     link: "https://teknoklop.com/",
+  },
+  {
+    id: 7,
+    title: "Travel APP",
+    description: "A Travel Booking Application",
+    detailDescription:
+      "A travel booking application developed to provide users with a seamless experience for planning and booking their trips. The app features a modern, responsive design to enhance user engagement and provide clear information for travelers.",
+    technologies: ["Flutter", "Dart"],
+    images: [travel],
+    link: "https://travel-app-git-gh-pages-nuruslailys-projects.vercel.app/",
   },
 ];
