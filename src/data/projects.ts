@@ -7,6 +7,7 @@ import tekno2 from "../assets/images/tekno2.webp";
 import mockup_pointid from "../assets/images/mockup-pointid.webp";
 import mockup_pjt from "../assets/images/mockup-pjt.webp";
 import travel from "../assets/images/travel-app.webp";
+import wms from "../assets/images/wms.webp";
 export const projects = [
   {
     id: 1,
@@ -24,7 +25,7 @@ export const projects = [
     title: "CMMS JX Nippon Oil",
     description: "Computerized Maintenance Management System (CMMS)",
     detailDescription:
-      "Developing Computerized Maintenance Management System (CMMS) at Production PT. JX Nippon Oil (JX Group).",
+      "CMMS is a software solution designed to streamline and optimize maintenance operations within industrial settings. It provides a centralized platform for managing maintenance tasks, scheduling preventive maintenance, tracking work orders, and maintaining an inventory of spare parts. The system enhances operational efficiency, reduces downtime, and improves asset management by enabling proactive maintenance strategies and real-time monitoring of equipment performance.",
     technologies: ["Codeigniter", "PHP", "MySQL"],
     images: [cmms],
     link: "#",
@@ -41,9 +42,10 @@ export const projects = [
   },
   {
     id: 4,
-    title: "SID Integrated",
+    title: "SID (Smart Information Display)",
     description: "Smart Information Display",
-    detailDescription: `Redevelop Smart Information Display (SID) at Quality Assurance Production Pertamina Unit Cilacap (PUC), Pertamina Unit Gresik (PUG) & Pertamina Unit Jakarta (PUJ). Integrate SID with SiAP (Sistem Administrasi Pertamina).`,
+    detailDescription:
+      "SID is a laboratory monitoring and information display system developed for lubricants analysis and quality assurance processes within Pertamina. The platform has been implemented at Quality Assurance Production Pertamina Unit Cilacap (PUC), Pertamina Unit Gresik (PUG), and Pertamina Unit Jakarta (PUJ). Integrated with SiAP (Sistem Administrasi Pertamina), SID provides a centralized dashboard for monitoring laboratory activities, sample testing status, analytical results, and key performance indicators. The system enhances operational efficiency, improves data accessibility, and supports quality control processes by delivering real-time information for laboratory analysts and management teams. Through digitalization of laboratory workflows, SID assists in ensuring lubricant products consistently comply with quality standards and operational requirements.",
     technologies: [
       "React",
       "Typescript",
@@ -61,9 +63,9 @@ export const projects = [
     title: "WMS (Warehouse Management System)",
     description: "Warehouse Management System",
     detailDescription:
-      "Developed a scalable Warehouse Management System (WMS) to optimize inventory control, streamline stock movement, and integrate multi-location data in real-time. Designed for high-demand environments such as industrial and logistics sectors, including enterprise-level clients such as Pertamina Lubricants Production Unit Jakarta (PUJ), Gresik (PUG), and Cilacap (PUC).",
+      "WMS (Warehouse Management System) is a digital platform developed to manage warehouse operations and inventory for lubricant production and distribution. The system enables real-time stock monitoring, inventory control, goods receipt and issuance tracking, and multi-location warehouse integration. By centralizing warehouse data, WMS helps improve inventory accuracy, streamline operational workflows, and support efficient supply chain management across Pertamina Lubricants Production Units in Jakarta (PUJ), Gresik (PUG), and Cilacap (PUC).",
     technologies: ["Codeigniter", "PHP", "MySQL"],
-    images: [],
+    images: [wms],
     link: "#",
   },
   {
@@ -81,7 +83,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     images: [tekno, tekno2],
-    link: "https://teknoklop.com/",
+    link: "https://companyprofile.teknoklop.com/",
   },
   {
     id: 7,

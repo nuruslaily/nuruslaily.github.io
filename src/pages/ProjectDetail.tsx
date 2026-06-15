@@ -9,6 +9,7 @@ import {
 import { useState } from "react";
 import { projects } from "../data/projects";
 import { motion } from "framer-motion";
+import ReactMarkdown from "react-markdown";
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -130,9 +131,23 @@ export default function ProjectDetail() {
           <h3 className="text-2xl font-bold mb-4">About This Project</h3>
           <div className="h-px bg-base-content/10 my-8" />
 
-          <p className="text-lg leading-relaxed text-base-content/80 max-w-3xl mx-auto text-justify">
-            {project.detailDescription}
-          </p>
+          <div className="max-w-4xl mx-auto overflow-hidden rounded-xl border border-base-300">
+            <div className="flex items-center gap-2 border-b border-base-300 bg-base-200 px-4 py-3">
+              <div className="h-3 w-3 rounded-full bg-red-400"></div>
+              <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
+              <div className="h-3 w-3 rounded-full bg-green-400"></div>
+
+              <span className="ml-2 text-sm text-base-content/60">
+                README.md
+              </span>
+            </div>
+
+            <div className="bg-base-100 p-6">
+              <div className="prose prose-lg max-w-none dark:prose-invert">
+                <ReactMarkdown>{project.detailDescription}</ReactMarkdown>
+              </div>
+            </div>
+          </div>
         </div>
 
         {project.link !== "#" ? (
