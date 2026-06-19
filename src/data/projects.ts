@@ -95,4 +95,24 @@ export const projects = [
     images: [travel],
     link: "https://travel-app-git-gh-pages-nuruslailys-projects.vercel.app/",
   },
+  {
+    id: 8,
+    title: "Wedding Invitation Website",
+    description: "A Wedding Invitation Website",
+    detailDescription:
+      "A wedding invitation website developed to provide a beautiful and interactive way for couples to share their special day with friends and family. The website features a modern, responsive design to enhance user engagement and provide clear information for guests.",
+    technologies: ["Html", "css"],
+    images: [],
+    link: "https://demo-undangan-six.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "Music Player App",
+    description: "A Music Player Application",
+    detailDescription:
+      "A music player application developed to provide users with a seamless experience for listening to their favorite songs. The app features a modern, responsive design to enhance user engagement and provide clear information for music lovers.",
+    technologies: ["React", "Vite.js", "Tailwind CSS"],
+    images: [],
+    link: "https://music-player-pi-rosy-64.vercel.app/",
+  },
 ];
