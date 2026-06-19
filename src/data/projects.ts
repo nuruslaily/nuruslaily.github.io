@@ -83,7 +83,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     images: [tekno, tekno2],
-    link: "https://companyprofile.teknoklop.com/",
+    link: "https://profile.teknoklop.com/",
   },
   {
     id: 7,
