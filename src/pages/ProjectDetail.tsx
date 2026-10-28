@@ -159,9 +159,9 @@ export default function ProjectDetail() {
               className="
                 inline-flex items-center gap-2
                 px-6 py-3 rounded-lg
-                bg-[#445c3f]
+                bg-[#2f4029]
                 hover:bg-[#7d936c]
-                text-white
+                text-[#eceee3]
                 transition-all duration-300
                 hover:scale-105
                 shadow-md hover:shadow-xl

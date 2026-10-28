@@ -4,39 +4,28 @@ import { Menu } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 export default function Navigation() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(
+    () => localStorage.getItem("theme") === "dark",
+  );
   const location = useLocation();
 
   const isProjectDetail = location.pathname.startsWith("/project/");
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme") === "dark";
-    setIsDark(saved);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 
     // DaisyUI
     document.documentElement.setAttribute(
       "data-theme",
-      saved ? "dark" : "light",
+      isDark ? "dark" : "light",
     );
 
     // Tailwind
-    document.documentElement.classList.toggle("dark", saved);
-  }, []);
+    document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark]);
 
   const toggleDarkMode = () => {
-    const newDark = !isDark;
-    setIsDark(newDark);
-
-    localStorage.setItem("theme", newDark ? "dark" : "light");
-
-    // DaisyUI
-    document.documentElement.setAttribute(
-      "data-theme",
-      newDark ? "dark" : "light",
-    );
-
-    // Tailwind (INI YANG PENTING)
-    document.documentElement.classList.toggle("dark", newDark);
+    setIsDark((prev) => !prev);
   };
 
   const navLink = (to: string, label: string) => (
@@ -60,7 +49,7 @@ export default function Navigation() {
       <div className="flex-1 mx-auto">
         <a
           href="/"
-          className="hover:text-[#445c3f] hover:shadow text-sm lg:text-lg font-bold mx-auto lg:mx-0 transition-all duration-300"
+          className="text-[#2f4029] hover:text-[#eceee3] text-sm lg:text-lg font-bold mx-auto lg:mx-0 transition-all duration-300"
         >
           Nurus Laily Aprilia
         </a>
@@ -86,7 +75,7 @@ export default function Navigation() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#445c3f] hover:bg-[#eceee3]  hover:text-[#445c3f] rounded-box w-40"
+                className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#2f4029] text-[#eceee3] rounded-box w-40"
               >
                 <li>{navLink("home", "Home")}</li>
                 <li>{navLink("about", "About")}</li>
@@ -97,22 +86,22 @@ export default function Navigation() {
 
             {/* Desktop */}
             <ul className="menu menu-horizontal hidden lg:flex gap-2">
-              <li className="hover:bg-[#121524] rounded-box">
+              <li className="hover:bg-[#2f4029] rounded-box">
                 <Link to="home" smooth>
                   Home
                 </Link>
               </li>
-              <li className="hover:bg-[#121524] rounded-box">
+              <li className="hover:bg-[#2f4029] rounded-box">
                 <Link to="about" smooth>
                   About
                 </Link>
               </li>
-              <li className="hover:bg-[#121524] rounded-box">
+              <li className="hover:bg-[#2f4029] rounded-box">
                 <Link to="projects" smooth>
                   Projects
                 </Link>
               </li>
-              <li className="hover:bg-[#121524] rounded-box">
+              <li className="hover:bg-[#2f4029] rounded-box">
                 <Link to="contact" smooth>
                   Contact
                 </Link>

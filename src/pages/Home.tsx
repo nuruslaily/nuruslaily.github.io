@@ -55,8 +55,8 @@ export default function Home() {
                     duration={500}
                     className="
                   btn cursor-pointer
-                  bg-[#445c3f] hover:bg-[#7d936c]
-                  dark:bg-[#7d936c] dark:hover:bg-[#121524]
+                  bg-[#2f4029] hover:bg-[#7d936c]
+                  dark:bg-[#121524] dark:hover:bg-[#2a3147]
                   text-[#eceee3] border-0
                 "
                   >
@@ -73,8 +73,8 @@ export default function Home() {
                     download
                     className="
                   btn cursor-pointer ml-2
-                  bg-[#445c3f] hover:bg-[#7d936c]
-                  dark:bg-[#7d936c] dark:hover:bg-[#121524]
+                  bg-[#2f4029] hover:bg-[#7d936c]
+                  dark:bg-[#121524] dark:hover:bg-[#2a3147]
                   text-[#eceee3] border-0
                 "
                   >
@@ -86,6 +86,8 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      <div className="h-32 bg-linear-to-b from-[#445c3f] via-[#445c3f]/30 to-transparent" />
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}

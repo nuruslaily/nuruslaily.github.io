@@ -79,7 +79,7 @@ export default function Contact() {
               ></textarea>
               <button
                 type="submit"
-                className="btn bg-[#121524] border-0 hover:bg-[#121524] text-[#eceee3] w-full"
+                className="btn bg-[#2f4029] border-0 text-[#eceee3] hover:bg-[#7d936c] dark:bg-[#121524] dark:hover:bg-[#2a3147] dark:text-[#eceee3] w-full"
               >
                 Send Message
               </button>
@@ -93,7 +93,7 @@ export default function Contact() {
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:nuruslaily88@gmail.com"
-                className="btn btn-outline"
+                className="btn btn-outline border-[#eceee3] text-[#eceee3] hover:border-[#eceee3] hover:bg-[#eceee3] hover:text-[#2f4029]"
               >
                 <Mail />
                 Email
@@ -102,7 +102,7 @@ export default function Contact() {
                 href="https://github.com/nuruslaily"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline border-[#eceee3] text-[#eceee3] hover:border-[#eceee3] hover:bg-[#eceee3] hover:text-[#2f4029]"
               >
                 <Github /> GitHub
               </a>
@@ -110,7 +110,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/nurus-laily-aprilia-5a553620a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline border-[#eceee3] text-[#eceee3] hover:border-[#eceee3] hover:bg-[#eceee3] hover:text-[#2f4029]"
               >
                 <Linkedin /> LinkedIn
               </a>
@@ -118,7 +118,7 @@ export default function Contact() {
                 href="https://web.facebook.com/nuruslailyaprillia/?locale=id_ID"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline border-[#eceee3] text-[#eceee3] hover:border-[#eceee3] hover:bg-[#eceee3] hover:text-[#2f4029]"
               >
                 <Facebook />
                 Facebook
@@ -127,7 +127,7 @@ export default function Contact() {
                 href="https://www.instagram.com/nuruslailya/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline border-[#eceee3] text-[#eceee3] hover:border-[#eceee3] hover:bg-[#eceee3] hover:text-[#2f4029]"
               >
                 <Instagram />
                 Instagram
@@ -136,7 +136,7 @@ export default function Contact() {
                 href="https://www.threads.com/@nuruslailya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline border-[#eceee3] text-[#eceee3] hover:border-[#eceee3] hover:bg-[#eceee3] hover:text-[#2f4029]"
               >
                 <AtSign />
                 Threads

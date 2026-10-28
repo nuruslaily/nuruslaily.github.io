@@ -51,7 +51,7 @@ export default function About() {
               -inset-6
               bg-linear-to-br
               from-[#445c3f]
-              to-[#121524]
+              to-[#2f4029]
               rounded-2xl
               blur-2xl
               opacity-30
@@ -63,13 +63,13 @@ export default function About() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={handlePrevImage}
-                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#eceee3]"
+                className="btn btn-sm bg-[#2f4029] hover:bg-[#7d936c] text-[#eceee3]"
               >
                 Prev
               </button>
               <button
                 onClick={handleNextImage}
-                className="btn btn-sm bg-[#121524] hover:bg-[#180018] text-[#eceee3]"
+                className="btn btn-sm bg-[#2f4029] hover:bg-[#7d936c] text-[#eceee3]"
               >
                 Next
               </button>
