@@ -63,7 +63,7 @@ export default function Navigation() {
             onChange={toggleDarkMode}
             className="toggle dark:bg-[#7d936c] dark:checked:bg-[#445c3f]"
           />
-          <span className="text-xl">{isDark ? "🌙" : "☀️"}</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2f4029] text-lg shadow-sm">{isDark ? "🌙" : "☀️"}</span>
         </label>
 
         {!isProjectDetail && (
