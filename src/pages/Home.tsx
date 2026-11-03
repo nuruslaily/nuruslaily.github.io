@@ -2,7 +2,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { Link } from "react-scroll";
-import Resume from "../assets/file/Resume-Nurus-Laily-A.pdf";
+import Resume from "../assets/file/Resume-Nurus-Laily-Aprilia_Fullstack-Developer.pdf";
 import { motion } from "framer-motion";
 // import profileImage from "../assets/profile.jpg";
 
