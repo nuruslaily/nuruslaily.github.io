@@ -131,8 +131,8 @@ export default function ProjectDetail() {
           <h3 className="text-2xl font-bold mb-4">About This Project</h3>
           <div className="h-px bg-base-content/10 my-8" />
 
-          <div className="max-w-4xl mx-auto overflow-hidden rounded-xl border border-base-300">
-            <div className="flex items-center gap-2 border-b border-base-300 bg-base-200 px-4 py-3">
+          <div className="max-w-4xl mx-auto overflow-hidden rounded-xl border border-black dark:border-white">
+            <div className="flex items-center gap-2 border-b border-black dark:border-white bg-base-200 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-400"></div>
               <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
               <div className="h-3 w-3 rounded-full bg-green-400"></div>
