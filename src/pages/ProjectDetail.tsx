@@ -10,6 +10,7 @@ import { useState } from "react";
 import { projects } from "../data/projects";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
+import TechIcon from "../components/TechIcon";
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -113,6 +114,7 @@ export default function ProjectDetail() {
               <span
                 key={idx}
                 className="
+                    group inline-flex items-center gap-2
                     px-4 py-2 rounded-full text-sm font-medium
                     bg-[#445c3f]/90
                     text-[#eceee3]
@@ -120,6 +122,10 @@ export default function ProjectDetail() {
                     hover:scale-105 transition
                   "
               >
+                <TechIcon
+                  name={tech}
+                  className="h-4 w-4 transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6"
+                />
                 {tech}
               </span>
             ))}

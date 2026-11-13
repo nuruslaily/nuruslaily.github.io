@@ -1,6 +1,7 @@
 import { MoveRight } from "lucide-react";
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
+import TechIcon from "../components/TechIcon";
 
 export default function Projects() {
   return (
@@ -19,8 +20,12 @@ export default function Projects() {
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="badge bg-[#eceee3] border-0 hover:bg-[#eceee3] text-[#2f4029] dark:bg-[#121524] dark:hover:bg-[#121524] dark:text-[#eceee3] badge-sm"
+                    className="badge group inline-flex items-center gap-1 bg-[#2f4029] border-0 hover:bg-[#eceee3] text-[#eceee3] dark:bg-[#121524] dark:hover:bg-[#121524] dark:text-[#eceee3] badge-sm"
                   >
+                    <TechIcon
+                      name={tech}
+                      className="h-3 w-3 transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6"
+                    />
                     {tech}
                   </span>
                 ))}

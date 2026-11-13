@@ -101,7 +101,7 @@ export const projects = [
     description: "A Wedding Invitation Website",
     detailDescription:
       "A wedding invitation website developed to provide a beautiful and interactive way for couples to share their special day with friends and family. The website features a modern, responsive design to enhance user engagement and provide clear information for guests.",
-    technologies: ["Html", "css"],
+    technologies: ["HTML", "CSS"],
     images: [],
     link: "https://demo-undangan-six.vercel.app/",
   },

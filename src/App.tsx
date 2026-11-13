@@ -12,8 +12,6 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-
-        {/* Detail project tetap boleh pakai route */}
         <Route path="/project/:id" element={<ProjectDetail />} />
       </Routes>
       <Footer />
